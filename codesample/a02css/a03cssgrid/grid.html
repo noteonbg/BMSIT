@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manufacturing Dashboard</title>
+
+  <!--
+
+Grid Layout:
+
+The .dashboard class uses grid-template-columns: repeat(3, 1fr) to create a three-column layout. It adapts based on the screen size:
+On small screens, it switches to 2 columns, and on very small screens (like mobile), it changes to 1 column.
+Card Design:
+
+Each section of the dashboard (e.g., Production Status, Machine Health) is displayed in a card with a white background, rounded corners, and subtle shadows to give it a clean and modern look.
+Responsive Design:
+
+The media queries (@media) ensure that the layout is mobile-friendly by stacking the cards in a single column on smaller screen
+  
+  
+-->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      background-color: #f4f4f4;
+    }
+    .dashboard {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      width: 100%;
+    }
+
+    /* Card-style layout */
+    .card {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+    }
+
+    .card h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 18px;
+    }
+
+    /* Responsive for smaller screens */
+    @media (max-width: 768px) {
+      .dashboard {
+        grid-template-columns: 1fr 1fr; /* 2 columns on smaller screens */
+      }
+    }
+
+    @media (max-width: 480px) {
+      .dashboard {
+        grid-template-columns: 1fr; /* 1 column on very small screens */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="dashboard">
+    <!-- Production Status -->
+    <div class="card">
+      <h2>Production Status</h2>
+      <p>80% Completed</p>
+      <p>Daily Target: 500 units</p>
+    </div>
+
+    <!-- Machine Health -->
+    <div class="card">
+      <h2>Machine Health</h2>
+      <p>Machine 1: Running</p>
+      <p>Machine 2: Maintenance Due</p>
+      <p>Machine 3: Running</p>
+    </div>
+
+    <!-- Inventory Level -->
+    <div class="card">
+      <h2>Inventory Level</h2>
+      <p>Raw Materials: 1200 units</p>
+      <p>Finished Goods: 450 units</p>
+      <p>Defective Units: 5</p>
+    </div>
+
+    <!-- Production Timeline -->
+    <div class="card">
+      <h2>Production Timeline</h2>
+      <p>Next Batch: 2 PM</p>
+      <p>Scheduled Maintenance: 3 PM</p>
+      <p>Quality Check: 4 PM</p>
+    </div>
+
+    <!-- Employee Status -->
+    <div class="card">
+      <h2>Employee Status</h2>
+      <p>Operators: 5 Active</p>
+      <p>Supervisors: 2 Available</p>
+      <p>Technicians: 1 On Site</p>
+    </div>
+
+    <!-- Safety Checks -->
+    <div class="card">
+      <h2>Safety Checks</h2>
+      <p>Fire Safety: Passed</p>
+      <p>Machine Safety: Pending</p>
+      <p>Emergency Equipment: Checked</p>
+    </div>
+  </div>
+
+</body>
+</html>

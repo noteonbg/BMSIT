@@ -1,0 +1,29 @@
+{
+    "products": [
+      {
+        "name": "Cement",
+        "category": "Construction Materials",
+        "price": 10.99,
+        "quantity": 100
+      },
+      {
+        "name": "Steel Rods",
+        "category": "Construction Materials",
+        "price": 25.50,
+        "quantity": 150
+      },
+      {
+        "name": "Welding Machine",
+        "category": "Machines",
+        "price": 400.00,
+        "quantity": 15
+      },
+      {
+        "name": "Hand Tools Set",
+        "category": "Tools",
+        "price": 60.00,
+        "quantity": 50
+      }
+    ]
+  }
+  

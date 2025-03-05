@@ -1,0 +1,18 @@
+/* Container element */
+.container {
+    display: flex; /* This makes the container a flex container */
+    justify-content: space-between; /* Distributes space between items */
+    align-items: center; /* Aligns items vertically in the center */
+    height: 100vh; /* Sets the height of the container to the full height of the viewport */
+    background-color: #f4f4f4; /* Light gray background color */
+}
+
+/* Flex items inside the container */
+.item {
+    background-color: #3498db; /* Blue background for each item */
+    color: white; /* White text color */
+    padding: 20px; /* Adds space inside each item */
+    text-align: center; /* Centers the text inside each item */
+    flex-grow: 1;/* Makes each item grow to fill the space */
+    margin: 10px; /* Adds space around each item */
+}

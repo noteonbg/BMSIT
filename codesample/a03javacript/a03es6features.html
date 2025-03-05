@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manufacturing Inventory Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f7fc;
+      padding: 20px;
+    }
+    h1 {
+      color: #333;
+    }
+    form {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      margin: auto;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+    input, button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    .product-list {
+      margin-top: 30px;
+    }
+    .product-item {
+      background: #f9f9f9;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+    .product-item strong {
+      font-size: 1.1em;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Manufacturing Inventory Form</h1>
+
+  <form id="inventoryForm">
+    <label for="productName">Product Name:</label>
+    <input type="text" id="productName" name="productName" required>
+
+    <label for="quantity">Quantity:</label>
+    <input type="number" id="quantity" name="quantity" required>
+
+    <label for="price">Price per Unit:</label>
+    <input type="number" id="price" name="price" required>
+
+    <button type="submit">Add Product</button>
+  </form>
+
+  <div id="message"></div>
+
+  <div class="product-list" id="productList"></div>
+
+  <script>
+    // ES6 Features: Let, Const, Arrow Functions, Template Literals, etc.
+
+    // Form and message elements
+    const inventoryForm = document.getElementById('inventoryForm');
+    const productList = document.getElementById('productList');
+    const messageDiv = document.getElementById('message');
+
+    // Array to hold products
+    let products = [];
+
+    // Add Product Function
+    const addProduct = (name, quantity, price) => {
+      // Create product object
+      const newProduct = {
+        name,
+        quantity,
+        price
+      };
+
+      // Push to products array
+      products.push(newProduct);
+
+      // Clear the form fields after submission
+      inventoryForm.reset();
+
+      // Display success message
+      messageDiv.innerHTML = `<p>Product "${name}" added successfully!</p>`;
+      messageDiv.style.color = 'green';
+
+      // Call function to render the updated product list
+      renderProductList();
+    };
+
+    // Render Product List Function
+    const renderProductList = () => {
+      // Clear previous product list display
+      productList.innerHTML = '';
+
+      // Loop through the products array and display each product
+      products.forEach((product) => {
+        const productItem = document.createElement('div');
+        productItem.className = 'product-item';
+        productItem.innerHTML = `
+          <strong>${product.name}</strong><br>
+          Quantity: ${product.quantity}<br>
+          Price per Unit: Rs ${product.price}
+        `;
+        productList.appendChild(productItem);
+      });
+    };
+
+    // Form submission event
+    inventoryForm.addEventListener('submit', (event) => {
+      event.preventDefault(); // Prevent form from refreshing the page
+
+      const name = document.getElementById('productName').value;
+      const quantity = parseInt(document.getElementById('quantity').value);
+      const price = parseFloat(document.getElementById('price').value);
+
+      // Validate input fields
+      if (name && quantity && price) {
+        addProduct(name, quantity, price);
+      } else {
+        messageDiv.innerHTML = `<p style="color: red;">Please fill in all fields.</p>`;
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+python -m venv venv (virtualenvironemnt name)
+
+venv\Scripts\activate
+
+pip install flask
+pip install flask-cors
+pip install bcrypt
+pip install flask-jwt-extended
+pip install sqlalchemy
+
+
+
+
+
+pip freeze > requirements.txt   
+
+python app.py
+
+--------------------------------
+
+running database program.
+
+1. run a03init_db.py so that database is created
+tables are there..
+
+2. run a04crud.py
+
+3. come to the folder a03javascript and run
+the program a07products.html
+
+-------------------------------------
+
+
+
+
+
+
+

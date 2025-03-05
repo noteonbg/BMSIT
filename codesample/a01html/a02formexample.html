@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Manufacturing Inventory Management Form">
+    <title>Manufacturing Inventory Management</title>
+</head>
+<body>
+
+    <h1>Inventory Management Form</h1>
+
+    <form action="/submit-inventory" method="POST">
+        <!-- Text Input for Product Name -->
+        <label for="product-name">Product Name:</label>
+        <input type="text" id="product-name" name="product-name" placeholder="Enter product name" required>
+        <br><br>
+
+        <!-- Number Input for Product Quantity -->
+        <label for="product-quantity">Quantity:</label>
+        <input type="number" id="product-quantity" name="product-quantity" min="1" max="1000" required>
+        <br><br>
+
+        <!-- Date Input for Manufacturing Date -->
+        <label for="manufacture-date">Manufacturing Date:</label>
+        <input type="date" id="manufacture-date" name="manufacture-date" required>
+        <br><br>
+
+        <!-- Radio Buttons for Product Condition -->
+        <fieldset>
+            <legend>Product Condition:</legend>
+            <input type="radio" id="new-condition" name="condition" value="New" checked>
+            <label for="new-condition">New</label><br>
+            <input type="radio" id="refurbished-condition" name="condition" value="Refurbished">
+            <label for="refurbished-condition">Refurbished</label><br>
+            <input type="radio" id="damaged-condition" name="condition" value="Damaged">
+            <label for="damaged-condition">Damaged</label><br>
+        </fieldset>
+        <br><br>
+
+        <!-- Checkbox for Item Availability -->
+        <label for="item-availability">Is the item available for sale?</label>
+        <input type="checkbox" id="item-availability" name="item-availability" value="Available">
+        <br><br>
+
+        <!-- Dropdown (Select) for Product Category -->
+        <label for="product-category">Product Category:</label>
+        <select id="product-category" name="product-category" required>
+            <option value="raw-material">Raw Material</option>
+            <option value="finished-goods">Finished Goods</option>
+            <option value="spare-parts">Spare Parts</option>
+            <option value="tools">Tools</option>
+        </select>
+        <br><br>
+
+        <!-- Textarea for Additional Notes -->
+        <label for="additional-notes">Additional Notes:</label>
+        <textarea id="additional-notes" name="additional-notes" rows="4" cols="50" placeholder="Enter any additional information"></textarea>
+        <br><br>
+
+        <!-- File Upload for Product Image -->
+        <label for="product-image">Upload Product Image:</label>
+        <input type="file" id="product-image" name="product-image" accept="image/*">
+        <br><br>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Submit Inventory">
+    </form>
+
+</body>
+</html>

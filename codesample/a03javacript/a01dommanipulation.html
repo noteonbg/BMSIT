@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Manipulation Example</title>
+</head>
+<body>
+
+  <!-- Button to change the background color -->
+  <button id="changeColorBtn">Change Background Color</button>
+
+  <!-- A div that we will change the background color of -->
+  <div id="colorBox" style="width: 300px; height: 200px; background-color: lightblue; margin-top: 20px;">
+    This is the color box!
+  </div>
+
+  <script>
+    // Get the button and the div elements from the DOM
+    const changeColorBtn = document.getElementById('changeColorBtn');
+    const colorBox = document.getElementById('colorBox');
+
+    // Add an event listener to the button
+    changeColorBtn.addEventListener('click', function() {
+      // Change the background color of the div when the button is clicked
+      colorBox.style.backgroundColor = 'lightgreen';
+    });
+  </script>
+
+</body>
+</html>

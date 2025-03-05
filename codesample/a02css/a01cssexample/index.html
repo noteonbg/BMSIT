@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors Examples</title>
+    <style>
+        /* Element Selector */
+        p {
+            color: blue;
+        }
+
+        /* Class Selector */
+        .my-class {
+            font-size: 16px;
+        }
+
+        /* ID Selector */
+        #my-id {
+            background-color: yellow;
+        }
+
+        /* Attribute Selector */
+        a[href="https://example.com"] {
+            text-decoration: none;
+        }
+
+        /* Descendant Selector */
+        div p {
+            color: red;
+        }
+
+        /* Child Selector */
+        div > p {
+            font-weight: bold;
+        }
+
+        /* Adjacent Sibling Selector */
+        h2 + p {
+            margin-top: 20px;
+        }
+
+        /* General Sibling Selector */
+        h2 ~ p {
+            color: green;
+        }
+
+        /* Pseudo-Class */
+        a:hover {
+            color: red;
+        }
+
+        /* Pseudo-Element */
+        p::first-letter {
+            font-size: 2em;
+        }
+
+        /* Universal Selector */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Element Selector -->
+    <p>This text will be blue.</p>
+
+    <!-- Class Selector -->
+    <p class="my-class">This text will have a font size of 16px.</p>
+
+    <!-- ID Selector -->
+    <div id="my-id">This element has a yellow background.</div>
+
+    <!-- Attribute Selector -->
+    <a href="https://example.com">This link will not be underlined.</a>
+
+    <!-- Descendant Selector -->
+    <div>
+        <p>This paragraph inside a div will be red.</p>
+    </div>
+
+    <!-- Child Selector -->
+    <div>
+        <p>This is a direct child of a div and will be bold.</p>
+        <span>
+            <p>This paragraph inside a span won't be bold because it's not a direct child of div.</p>
+        </span>
+    </div>
+
+    <!-- Adjacent Sibling Selector -->
+    <h2>This is a heading</h2>
+    <p>This paragraph will have a margin top of 20px because it's immediately after an <h2>.</p>
+    <p>This paragraph won't be affected because it's not directly after the <h2>.</p>
+
+    <!-- General Sibling Selector -->
+    <h2>This is a heading</h2>
+    <p>This paragraph will be green because it's a sibling of <h2>.</p>
+    <p>This paragraph will also be green for the same reason.</p>
+    <div>
+        <p>This paragraph won't be green because it's not a sibling of the <h2> element.</p>
+    </div>
+
+    <!-- Pseudo-Class -->
+    <a href="https://example.com">Hover over me to change my color!</a>
+
+    <!-- Pseudo-Element -->
+    <p>This paragraph has a large first letter.</p>
+
+    <!-- Universal Selector -->
+    <div>This div has no margin or padding.</div>
+    <p>This paragraph also has no margin or padding.</p>
+</body>
+</html>

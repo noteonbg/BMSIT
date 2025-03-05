@@ -1,0 +1,87 @@
+ensure npm and nodejs is working.. how find out.
+
+npm init -y
+
+npm install --save-dev jest
+
+in package.json
+package.json
+
+"scripts": {
+  "test": "jest"
+}
+
+javascript code.
+// calculator.js
+
+function add(x, y) {
+  return x + y;
+}
+
+function subtract(x, y) {
+  return x - y;
+}
+
+function multiply(x, y) {
+  return x * y;
+}
+
+function divide(x, y) {
+  if (y === 0) {
+    throw new Error("Cannot divide by zero");
+  }
+  return x / y;
+}
+
+module.exports = { add, subtract, multiply, divide };
+
+
+
+// calculator.test.js
+const { add, subtract, multiply, divide } = require('./calculator');
+
+test('adds 1 + 2 to equal 3', () => {
+  expect(add(1, 2)).toBe(3);
+});
+
+test('subtracts 5 - 3 to equal 2', () => {
+  expect(subtract(5, 3)).toBe(2);
+});
+
+test('multiplies 3 * 4 to equal 12', () => {
+  expect(multiply(3, 4)).toBe(12);
+});
+
+test('divides 10 / 2 to equal 5', () => {
+  expect(divide(10, 2)).toBe(5);
+});
+
+test('throws error when dividing by zero', () => {
+  expect(() => {
+    divide(10, 0);
+  }).toThrow("Cannot divide by zero");
+});
+
+
+/*
+
+test():
+
+test() is a Jest function that defines a unit test. It takes two arguments:
+A description of the test (e.g., 'adds 1 + 2 to equal 3').
+A callback function that runs the code being tested and uses Jest assertions like expect() to check the results.
+expect():
+
+expect() is used to create assertions in Jest. The value passed to expect() is the result of the code being tested.
+We then use matchers like .toBe() to compare the actual value against the expected value.
+Testing for Errors:
+
+For the division function, we want to test the case where dividing by zero throws an error. Jest provides the .toThrow() matcher to check if the function throws the expected error.
+
+
+
+*/
+
+npm test
+npx test
+

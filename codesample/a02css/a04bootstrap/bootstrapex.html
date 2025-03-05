@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+
+1. Grid System
+Bootstrap's grid system is used to create a responsive
+ layout for the dashboard. The .row class creates a
+  flex container, and the .col-md-4 class divides 
+  the row into 3 columns, each taking up 4/12 of the
+   width on medium and larger screens.
+
+Responsive Layout: On smaller screens (like mobile), the
+ columns will stack vertically, which is managed
+  automatically by Bootstrap.
+
+2. Cards
+The card component is used to display various sections 
+of the dashboard such as Production Status, Machine Health,
+ and Inventory Level. Cards are a flexible and
+  extensible content container.
+
+Example: Each section is inside a <div class="card"> 
+    that holds a title, text, and a button.
+
+3. Buttons
+Bootstrap provides predefined button styles 
+(.btn-primary, .btn-warning, .btn-success, .btn-info) 
+to enhance the look and feel of interactive elements.
+Example: The Add New Machine button opens a modal, while the View Maintenance button allows users to interact with machine health information.
+
+4. Modals
+The modal component is used for pop-up dialogs. In this example,
+ a modal is used for adding a new machine to the production floor
+ . The modal contains a form for entering the machine's name, type, and status.
+
+Example: Clicking the Add New Machine button triggers the modal to open.
+5. Forms
+Bootstrap's form components (like <form>, <input>, <select>, and .form-control) are used to create a form inside the modal for adding new machines.
+
+Example: The user enters the machine's name, selects its type, and assigns a status (Running, Maintenance, or Idle).
+6. Alerts
+The alert component is used to show important messages or warnings on the dashboard. For example, an alert is displayed when a machine needs maintenance.
+
+Example: A red warning alert is displayed at the top to indicate that Machine 2 is due for maintenance.
+7. Responsive Design
+The grid system and responsive utilities ensure that the dashboard adjusts seamlessly across various devices. It will display 3 columns on larger screens, 2 columns on tablets, and 1 column on mobile devices.
+
+
+-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manufacturing Dashboard</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .card-title {
+      font-size: 1.5rem;
+    }
+    .card-body {
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Container to hold the dashboard -->
+  <div class="container my-5">
+    <div class="row">
+      <!-- Production Status -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Production Status</h5>
+            <p class="card-text">80% Completed</p>
+            <p class="card-text">Daily Target: 500 units</p>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addMachineModal">Add New Machine</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Machine Health -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Machine Health</h5>
+            <p class="card-text">Machine 1: Running</p>
+            <p class="card-text">Machine 2: Maintenance Due</p>
+            <p class="card-text">Machine 3: Running</p>
+            <button class="btn btn-warning">View Maintenance</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Inventory Level -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Inventory Level</h5>
+            <p class="card-text">Raw Materials: 1200 units</p>
+            <p class="card-text">Finished Goods: 450 units</p>
+            <p class="card-text">Defective Units: 5</p>
+            <button class="btn btn-success">View Inventory</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Alert Example -->
+    <div class="alert alert-danger" role="alert">
+      Warning: Machine 2 is due for maintenance!
+    </div>
+
+    <!-- Button for opening the Modal -->
+    <button class="btn btn-info mt-3" data-bs-toggle="modal" data-bs-target="#addMachineModal">
+      Add New Machine
+    </button>
+
+    <!-- Modal Example: Add New Machine -->
+    <div class="modal fade" id="addMachineModal" tabindex="-1" aria-labelledby="addMachineModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="addMachineModalLabel">Add New Machine</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!-- Form to add new machine -->
+            <form>
+              <div class="mb-3">
+                <label for="machineName" class="form-label">Machine Name</label>
+                <input type="text" class="form-control" id="machineName" placeholder="Enter machine name">
+              </div>
+              <div class="mb-3">
+                <label for="machineType" class="form-label">Machine Type</label>
+                <select class="form-select" id="machineType">
+                  <option value="CNC">CNC</option>
+                  <option value="Lathe">Lathe</option>
+                  <option value="Milling">Milling</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="machineStatus" class="form-label">Machine Status</label>
+                <select class="form-select" id="machineStatus">
+                  <option value="Running">Running</option>
+                  <option value="Maintenance">Maintenance</option>
+                  <option value="Idle">Idle</option>
+                </select>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save Machine</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+

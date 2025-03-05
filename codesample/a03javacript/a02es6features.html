@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ES6 Features Demo</title>
+</head>
+<body>
+
+  <h1>ES6 Features in JavaScript</h1>
+  
+  <button id="showResult">Show Result</button>
+  
+  <div id="output"></div>
+
+  <script>
+    // Let and Const
+    let letVariable = "I'm a let variable";  // block-scoped
+    const constVariable = "I'm a const variable";  // cannot be reassigned
+
+    // Arrow Function
+    const greet = (name) => `Hello, ${name}!`;
+
+    // Template Literals
+    const user = 'Alice';
+    const welcomeMessage = `Welcome, ${user}, to the ES6 demo!`;
+
+    // Destructuring Assignment
+    const person = { name: "John", age: 30 };
+    const { name, age } = person;
+
+    // Default Parameters
+    const greetUser = (name = 'Guest') => `Hello, ${name}`;
+
+    // Rest and Spread Operators
+    const sum = (...numbers) => numbers.reduce((a, b) => a + b, 0);
+    const array = [1, 2, 3, 4];
+    const newArray = [...array, 5, 6];
+
+    // Classes
+    class Person {
+      constructor(name, age) {
+        this.name = name;
+        this.age = age;
+      }
+      greet() {
+        return `Hi, I'm ${this.name} and I'm ${this.age} years old.`;
+      }
+    }
+
+    // Promises
+    const fetchData = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve("Data fetched successfully");
+      }, 2000);
+    });
+
+    // For...of Loop
+    const items = ["Apple", "Banana", "Cherry"];
+    let itemsList = "";
+    for (const item of items) {
+      itemsList += `<p>${item}</p>`;
+    }
+
+    // On button click, show the results
+    document.getElementById('showResult').addEventListener('click', () => {
+      const personObj = new Person("Alice", 28);
+      
+      fetchData.then((message) => {
+        document.getElementById('output').innerHTML = `
+          <p><strong>Let/Const:</strong> ${letVariable} | ${constVariable}</p>
+          <p><strong>Arrow Function:</strong> ${greet('Alice')}</p>
+          <p><strong>Template Literals:</strong> ${welcomeMessage}</p>
+          <p><strong>Destructuring:</strong> Name: ${name}, Age: ${age}</p>
+          <p><strong>Default Parameters:</strong> ${greetUser()}</p>
+          <p><strong>Rest & Spread:</strong> Sum: ${sum(1, 2, 3)} | New Array: ${newArray.join(', ')}</p>
+          <p><strong>Class Instance:</strong> ${personObj.greet()}</p>
+          <p><strong>Promise:</strong> ${message}</p>
+          <h3>For...of Loop:</h3>
+          ${itemsList}
+        `;
+      }).catch((error) => {
+        document.getElementById('output').innerHTML = `<p>Error: ${error}</p>`;
+      });
+    });
+  </script>
+
+</body>
+</html>

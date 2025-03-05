@@ -1,0 +1,119 @@
+1. some basics.
+
+Learning programming... ok...
+1. be loyal to the project and respect architecture.
+2. tolerate uncertainty when in doubt write small programs
+which clarity the doubt on syntax or concept.
+3. generalize your learning so that we dont get killed
+by opinions of "frameworks" and "other langauges"...
+
+Programmer needs to be 5/5 in variables in functions
+
+variable.
+data type
+    operations
+    content.
+scope..
+
+functions
+defining a function
+    think who is going to call it.
+    how will he know what is input
+    whethr function suceeded or failed.
+
+assign a functions
+    pass function as a variable..
+    remember when we assign usually it means we dont
+    call the function.
+
+
+call a function.
+    open documentation until that you will not
+    know what function does.
+	
+
+
+When we tell web.
+http ..
+
+think of request and response.
+most of times it means you make a request and then the response
+will come ... there are exceptions like server side events (SSE),  to this we will think
+later on how...
+
+you are making a request.
+think who will process the request.... ( URI)
+think what you need to pass 
+how..
+1. thru form inputs
+2. thru http headers.
+3. thru session or cookie data...
+4. what is your mode of request...
+
+ok on the server.
+1. you have event hanlding functions...
+ie function which gets called when the event occurs...
+please note the function is not called by you...
+it is called by the system.... your job as a programmer
+is to define it and then call will be done by the system.
+
+difference between http and https.
+The primary difference between HTTP (Hypertext Transfer Protocol) and HTTPS (Hypertext Transfer Protocol Secure) lies in security. 
+
+1. HTTP is an unsecured protocol, meaning data transmitted between the client (browser) and the server is not encrypted. This makes it vulnerable to attacks like eavesdropping and man-in-the-middle attacks.
+   
+2. HTTPS is the secure version of HTTP. It uses SSL/TLS (Secure Sockets Layer / Transport Layer Security) encryption to secure the communication between the client and the server. This ensures that data exchanged is encrypted, making it much harder for attackers to intercept or tamper with the data.
+
+ Example:
+
+- HTTP URL:  
+  `http://www.abc.com`
+  - If you visit a website with `http://`, the communication is not encrypted.
+  - Anyone on the same network can potentially intercept data (like passwords, credit card information) being sent between your browser and the server.
+
+- HTTPS URL:  
+  `https://www.abc.com`
+  - If the website uses `https://`, the data is encrypted, so even if someone intercepts it, they cannot easily read it.
+  - You'll also typically see a padlock symbol next to the URL in your browser, indicating that the connection is secure.
+
+ In simple terms:
+- HTTP is like sending a postcard (anyone can read it).
+- HTTPS is like sending a sealed envelope (only the recipient can read it).
+
+-----------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

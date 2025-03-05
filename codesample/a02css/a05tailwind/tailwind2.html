@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manufacturing Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+
+  <!-- Main Container -->
+  <div class="flex h-screen">
+
+    <!-- Sidebar -->
+    <div class="w-1/4 bg-blue-800 text-white p-5">
+      <h2 class="text-2xl font-semibold mb-4">Factory Dashboard</h2>
+      <ul>
+        <li class="mb-3"><a href="#" class="text-lg hover:text-blue-300">Overview</a></li>
+        <li class="mb-3"><a href="#" class="text-lg hover:text-blue-300">Production Status</a></li>
+        <li class="mb-3"><a href="#" class="text-lg hover:text-blue-300">Inventory</a></li>
+        <li class="mb-3"><a href="#" class="text-lg hover:text-blue-300">Analytics</a></li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="w-3/4 p-8">
+
+      <!-- Header Section -->
+      <div class="flex justify-between items-center mb-6">
+        <h1 class="text-3xl font-semibold">Production Overview</h1>
+        <button class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-400">Add New Data</button>
+      </div>
+
+      <!-- Key Metrics -->
+      <div class="grid grid-cols-3 gap-6 mb-8">
+        <div class="bg-white shadow-md p-5 rounded-lg text-center">
+          <h3 class="text-xl font-bold mb-3">Production Rate</h3>
+          <p class="text-3xl">150 units/hr</p>
+        </div>
+        <div class="bg-white shadow-md p-5 rounded-lg text-center">
+          <h3 class="text-xl font-bold mb-3">Downtime</h3>
+          <p class="text-3xl text-red-500">2 hrs</p>
+        </div>
+        <div class="bg-white shadow-md p-5 rounded-lg text-center">
+          <h3 class="text-xl font-bold mb-3">Inventory Levels</h3>
+          <p class="text-3xl">1200 units</p>
+        </div>
+      </div>
+
+      <!-- Production Data Table -->
+      <div class="bg-white shadow-md rounded-lg p-6">
+        <h3 class="text-2xl font-semibold mb-4">Production Data</h3>
+        <table class="min-w-full bg-white">
+          <thead>
+            <tr class="border-b">
+              <th class="py-2 px-4 text-left">Shift</th>
+              <th class="py-2 px-4 text-left">Units Produced</th>
+              <th class="py-2 px-4 text-left">Downtime</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b">
+              <td class="py-2 px-4">Morning</td>
+              <td class="py-2 px-4">1200</td>
+              <td class="py-2 px-4">30 mins</td>
+            </tr>
+            <tr class="border-b">
+              <td class="py-2 px-4">Afternoon</td>
+              <td class="py-2 px-4">1100</td>
+              <td class="py-2 px-4">45 mins</td>
+            </tr>
+            <tr>
+              <td class="py-2 px-4">Evening</td>
+              <td class="py-2 px-4">1300</td>
+              <td class="py-2 px-4">15 mins</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
+
+<!--
+
+Tailwind CSS Classes Used:
+bg-gray-100, bg-blue-800, bg-green-500: Background colors for the page and sidebar.
+text-white, text-xl, text-3xl, font-semibold: Text styling for headers and content.
+p-5, p-8, px-4, py-2: Padding for spacing.
+shadow-md, rounded-lg: Shadow and border-radius for the cards and table.
+grid, grid-cols-3, gap-6: CSS grid layout for the key metrics section.
+
+
+-->

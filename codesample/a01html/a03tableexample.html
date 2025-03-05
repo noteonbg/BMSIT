@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Manufacturing Product Inventory Table">
+    <title>Manufacturing Product Inventory</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Manufacturing Product Inventory</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>SKU</th>
+                <th>Quantity</th>
+                <th>Unit Price (Rs)</th>
+                <th>Total Value (Rs)</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>ACME Widget</td>
+                <td>W12345</td>
+                <td>250</td>
+                <td>15.00</td>
+                <td>3750.00</td>
+                <td>In Stock</td>
+            </tr>
+            <tr>
+                <td>Steel Bolt</td>
+                <td>B98765</td>
+                <td>500</td>
+                <td>0.75</td>
+                <td>375.00</td>
+                <td>In Stock</td>
+            </tr>
+            <tr>
+                <td>Hydraulic Pump</td>
+                <td>HP54321</td>
+                <td>75</td>
+                <td>150.00</td>
+                <td>11250.00</td>
+                <td>Low Stock</td>
+            </tr>
+            <tr>
+                <td>Industrial Gearbox</td>
+                <td>G23456</td>
+                <td>30</td>
+                <td>350.00</td>
+                <td>10500.00</td>
+                <td>Out of Stock</td>
+            </tr>
+            <tr>
+                <td>Electric Motor</td>
+                <td>M65432</td>
+                <td>120</td>
+                <td>100.00</td>
+                <td>12000.00</td>
+                <td>In Stock</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

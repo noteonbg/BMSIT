@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <script>
+        function calculate() {
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+            if (isNaN(num1) || isNaN(num2)) {
+                alert("Please enter valid numbers.");
+                return;
+            }
+            // Send data to the Flask server using fetch
+            fetch("/calculate", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({num1: num1, num2: num2})
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("sum").innerText = "Sum: " + data.sum;
+                document.getElementById("product").innerText = "Product: " + data.product;
+            });
+        }
+    </script>
+</head>
+<body>
+    <h1>Simple Calculator</h1>
+    <label for="num1">Enter first number:</label>
+    <input type="number" id="num1" name="num1"><br><br>
+    <label for="num2">Enter second number:</label>
+    <input type="number" id="num2" name="num2"><br><br>
+    <button onclick="calculate()">Calculate</button>
+
+    <h3 id="sum">Sum: </h3>
+    <h3 id="product">Product: </h3>
+</body>
+</html>
