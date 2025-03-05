@@ -1,0 +1,60 @@
+
+Data Structure: Each automobile in the inventory should have the following properties:
+
+id (number, unique identifier)
+make (string, e.g., "Toyota", "Honda")
+model (string, e.g., "Camry", "Civic")
+year (number, e.g., 2020, 2021)
+price (number, e.g., 20000)
+Sample JSON data to use for initial testing:
+
+json
+
+[
+    { "id": 1, "make": "Toyota", "model": "Camry", "year": 2020, "price": 20000 },
+    { "id": 2, "make": "Honda", "model": "Civic", "year": 2021, "price": 22000 },
+    { "id": 3, "make": "Ford", "model": "Mustang", "year": 2022, "price": 30000 }
+]
+Functional Requirements:
+
+Read: Display a list of all automobiles in the inventory. Each automobile should link to a detailed view.
+Create: Allow users to add a new automobile through a form. On submission, the new automobile should be added to the list and the user should be redirected to the main inventory page.
+Update: Allow users to edit the details of an existing automobile. Changes should be saved, and the user should be redirected to the inventory list.
+Delete: Enable users to remove an automobile from the inventory, with a confirmation prompt before deletion.
+User Interface:
+
+A main page that lists all automobiles with options to add, edit, and delete.
+A form page for adding and editing automobiles.
+Routing to handle navigation between the inventory list and form pages.
+Technology Stack:
+
+Frontend: React, React Router, Axios
+Backend: Use a mock API service like jsonplaceholder.typicode.com or a local JSON server to simulate API requests.
+
+Additional Features:
+Handle loading states and error messages for a better user experience.
+
+some UI tips
+
+Main Page Design Description
+Header:
+
+Title: "Automobile Inventory Management"
+A button or link to "Add New Automobile".
+Automobile List:
+
+A table or card layout displaying the list of automobiles.
+Each entry should include:
+Make
+Model
+Year
+Price
+Buttons for "Edit" and "Delete" next to each entry.
+
+Table Example:
+Columns: Make | Model | Year | Price | Actions
+Each row represents an automobile with "Edit" and "Delete" buttons.
+Footer:
+
+Basic footer information, like contact details or links to other sections
+
