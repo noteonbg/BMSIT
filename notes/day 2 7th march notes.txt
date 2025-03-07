@@ -1,0 +1,144 @@
+1. class is a data type..
+when we create  class, we are teaching
+the system hey look here comes
+a new data type , this is needed
+because my project requires one.
+
+2. datatype is used.. by creating
+a variable of the data type..
+
+3. so we create object... we are creating
+of the variable of the class.
+
+
+
+
+
+get comfortable with functions
+whose input is of class type
+and return is also of class type..
+
+
+
+full stack programming what is meaning...
+
+1. there is some business logic
+that needs to be done... you identify
+a function what is its input
+and what is its output.
+
+2. think how will the caller come to know
+to function failed because of caller.
+function succeeded
+function failed independent of caller
+
+
+prove we are relevant and not busy...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+http server 2
+http://127.0.0.1:5500/codesample/a03javacript/a06products.html
+
+python code is running.. http server 1
+Running on http://127.0.0.1:5000
+
+
+
+
+
+
+
+
+
+1. html
+2. css
+3. javascript.
+
+html 
+1. some tags are there, these are interpreted
+by browser.
+2. only html no value.. you must use css along
+with it from practical point of view.
+3. html tags
+semantic tags.
+form tags
+table tags
+multimedia tags.
+other tags.. h1, ui,li...
+
+4. css.
+the logic of css is something like this.
+
+find what in html
+do what kind of makeup.
+
+
+
+javascript...
+1. javascript learn it as anew language
+dont compare it with any language you already know.
+
+2. what can you do with javascript
+anything you do with other languages like python
+or java...
+
+3. what we are going to do with javascript.
+use it for web based presntation layer... 
+for dynamic behavior.
+
+
+
+what do we do with javascript
+
+1. we have a html page with us.
+javascript
+2. we setup events ..
+3. access parts of the html page..
+4. read some inputs.
+5. contact server and get output from the server.
+6. update the page.
+
+
+write a web service program to
+ensure if you give a number
+it should give next 5 multiples
+of the number.
+if number zero is given then
+it should be treated as an error condition
+
+try to understand codes present in
+a02xxx.hml to a05xxx.html present in
+a03javascript folder.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -7,7 +7,7 @@ CORS(app)
 # Sample product data
 products = [
     {
-        "name": "Cement",
+        "name": "Cement123",
         "category": "Construction Materials",
         "price": 10.99,
         "quantity": 100
