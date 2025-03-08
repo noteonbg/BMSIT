@@ -1,0 +1,111 @@
+learn some design patterns.
+
+1. observer.
+2. strategy
+3. template
+4. proxy
+5. singleton
+6. factory.
+
+
+
+cloud.
+availability of resource on demand
+possible only if you write web services
+because for cloud usage distributed computing
+is a must.
+
+security
+who are you
+what you can access.
+applicable only at web services level...
+
+unit testing..
+unit testing can done to act like a documentation
+for our code...
+and ok we prove our code is working..
+biggest problem is culture of the team will they
+do it or not...
+
+
+database.
+why use database .. physical and logical independence of
+data.. what is meaning of it...
+
+we have a table in a database called emp.
+we have got columsn empno and empname.
+we put two rows into the table.
+1, A
+2, B
+
+lateron due to project need we modified.
+the table emp to have email.
+old details 1, A and 2,B is not lost...
+
+but if we have a class called Emp
+in that we have empno and empname.
+we created two objects obj1, and ojb2
+and wrote to the file
+and class changes now, old details of obj1
+and obj2 cannot be read from the file.
+
+in a database..
+database is a superset.
+in the database
+
+tables.
+views
+indexes
+stored procedures
+triggers
+stored functions.
+
+please try to find out 
+which database you are planning to use
+how to going to view the data which tools
+you plan to use...
+
+simple database sqllite..
+to visualize the code.. i am going to use a tool
+dbviewer.. this is my opinion as of now. you can
+have other options also...
+
+
+
+
+database code.. crud operation
+insert
+update
+select
+delete.
+
+insert 
+   constraint violation..
+update
+	where condition failure
+select
+	you get some rows from the table
+and you have copy these rows into some datastrucure.
+delete 
+	where condition failure
+take care of success and failures..
+
+1. Dbbrowser you download... and install it.
+2. a02initdb.py run this
+3. see in your folder whether product.db is creating
+created.
+4. open dbbrowser utility and point to product.db
+5. run the program a04database.py
+6. run the program a06check.py
+7. run the program a05web service. py thru postman
+and see whether it works.
+
+
+
+
+
+
+
+
+
+session.
