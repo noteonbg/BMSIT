@@ -126,6 +126,26 @@ a03javascript folder.
 
 
 
+when we say request mode in http
+get 
+post
+
+
+
+
+
+in your python project folder
+install cors library..
+
+
+pip install flask-cors
+copy the file a01product.py
+run the program..
+
+visual code..
+install the live server  ( http server 2)
+a06products.html.
+a06products.html with live server..
 
 
 

@@ -69,7 +69,7 @@
         return response.json(); // parse the JSON data
       })
       .then(data => {
-        products = data.products;
+        products = data.freak;
         renderProductList(products);  // Render the entire product list initially
       })
       .catch(error => {

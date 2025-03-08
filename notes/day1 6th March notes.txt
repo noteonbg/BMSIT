@@ -153,6 +153,90 @@ and come back to X and not do phd on Y and forget X
 X= run my application.
 Y = virtual environment in python..
 
+1. clone the link.
+https://github.com/noteonbg/BMSIT.git
+
+2. there is a folder called.
+a00_all
+create a virtual environment .
+activate it.
+install flask..
+then run the program a00app.py.
+python a00app.py
+localhost:8080
+and run the program see do you get output.
+
+
+
+any person who does not know his project
+folder structure is unfit in a project.
+
+
+
+
+
+
+we have a request processing function
+what does the function  return
+some view.. html page... makeupset target.. browser...
+
+request processing function return is some data
+target is some other application... and not browser.
+
+how do I start my web journey...
+
+1. where does the request start.
+2. what is the URI...
+3. decide your mode of request.
+4. decide what you want to send.
+5. register for the event.
+6. when the event handling gets called, you 
+read from the request, and decide what
+will be your response..(X)
+x for makeup
+X for web service.. wrapper on the chocolate.
+
+JSON... kids anxiety.. expand it. JavaScript Object
+Notation..
+
+JSON is a standard for representating variables.
+it is a standard.. that means java will agree
+python and javascript will agree.
+
+standard means everybody agree...
+JSON
+
+1. standard for representing variables.
+2  in every language we can convert a json
+string into an object of that language
+and vice versa.
+
+we have an object with us.. in form of a json.
+{
+"length":3;
+"breadth:4
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
