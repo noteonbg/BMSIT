@@ -1,5 +1,5 @@
-from codesample.a00_all.a04database import  get_all_products
+from a04database import  get_all_products1
 
-x=get_all_products();
+x=get_all_products1();
 print(x)
 

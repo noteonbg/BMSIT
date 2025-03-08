@@ -1,5 +1,5 @@
 from flask import Flask, jsonify, request
-from codesample.a00_all.a04database import create_table, get_all_products, add_product, update_product, delete_product
+from a04database import create_table, get_all_products, add_product, update_product, delete_product
 from flask_cors import CORS
 
 app = Flask(__name__)

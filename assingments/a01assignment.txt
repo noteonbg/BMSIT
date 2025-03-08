@@ -15,6 +15,7 @@ Each product should have a unique identifier, name, and price.
 Create a function to apply discounts to all products based on a percentage.
 Ensure that you can handle edge cases, such as trying to update a product that doesn't exist.
 
+
 Problem Statement 2: Order Processing System
 Objective: Develop an order processing system for a manufacturing company.
 
