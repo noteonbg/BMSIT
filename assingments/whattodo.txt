@@ -1,0 +1,13 @@
+a01assignment.txt
+problem statement 1 to problem statement 3
+any 2..
+
+
+1. database layer.
+2. web services layer.
+3. post man this works..
+4. preferably write a html page which will show
+the web services is working.
+5. if possible for database layer done write
+unit test cases.
+march 25th 2025..
